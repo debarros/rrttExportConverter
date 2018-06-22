@@ -1,5 +1,3 @@
-# library(openxlsx)
-# library(dBtools)
 
 
 ASAP.SIAM_to_ScantronAS <- function(asapFilePath, sectionTable, merge = "TP", messageLevel = 0) {
