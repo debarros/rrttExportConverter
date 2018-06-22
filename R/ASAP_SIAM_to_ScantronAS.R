@@ -1,5 +1,21 @@
-
-
+#' @title ASAP Student Item Analysis Multo to Scantron Achievement Series
+#' @description Convert the Student Item Analysis Multi export from Level 0 ASAP
+#'   to the format of files exported from Scantron Achievement Series
+#' @param asapFilePath Character of length 1 containing the filepath of an
+#'   export from ASAP.
+#' @param sectionTable data.frame showing associations between students and
+#'   sections.  Columns include StudentID, Course, Teacher, Period, and Exam.
+#'   The exam value must match to exactly 1 regents exam name using grepl.
+#' @param merge character of length 1 indicating when to merge sections.
+#' @param messageLevel integer of length 1 indicating the level of messaging to
+#'   print.  Defaults to TP.
+#' @details For the \code{merge} parameter, the value will indicate whether to
+#'   group different sections together.  The most grouped values are T, C, or P
+#'   (for grouping all students who have the same teacher, course, or period,
+#'   respectively).  The least grouped value is TCP (for grouping students only
+#'   when they have the exact same teacher, course, and period).  Other
+#'   acceptable values are TC, TP, and CP.  Defaults to TP.
+#' @return Nothing is returned by this function.
 ASAP.SIAM_to_ScantronAS <- function(asapFilePath, sectionTable, merge = "TP", messageLevel = 0) {
   datapath = paste0(dirname(asapFilePath),"/exports")
   if(!dir.exists(datapath)){dir.create(datapath)}                   # If the datafolder doesn't exist, create it
