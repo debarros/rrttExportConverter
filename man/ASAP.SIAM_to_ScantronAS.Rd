@@ -5,7 +5,7 @@
 \title{ASAP Student Item Analysis Multi to Scantron Achievement Series}
 \usage{
 ASAP.SIAM_to_ScantronAS(asapFilePath, sectionTable, merge = "TP",
-  messageLevel = 0)
+  alphaResponses = T, messageLevel = 0)
 }
 \arguments{
 \item{asapFilePath}{Character of length 1 containing the filepath of an
@@ -17,6 +17,9 @@ sections.  Columns include \code{StudentID}, \code{Course}, \code{Teacher},
 regents exam name using \code{grepl}.}
 
 \item{merge}{character of length 1 indicating when to merge sections.}
+
+\item{alphaResponses}{logical of length 1 - should MC responses be converted
+from digits to letters?  Defaults to TRUE.}
 
 \item{messageLevel}{integer of length 1 indicating the level of messaging to
 print.  Defaults to \code{TP}.}
