@@ -1,7 +1,8 @@
 Package: rrttExportConverter
 Type: Package
 Title: RRTT Export Converter
-Version: 0.0.0.9001
+Version: 0.0.0.9002
+Date: 2018-06-29
 Authors@R: person("Paul", "de Barros", email = "pj.debarros@gmail.com", role = c("aut", "cre"))
 Description: Convert between different testing management system export files
 License: GPL-3
