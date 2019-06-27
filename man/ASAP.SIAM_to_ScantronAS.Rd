@@ -5,7 +5,7 @@
 \title{ASAP Student Item Analysis Multi to Scantron Achievement Series}
 \usage{
 ASAP.SIAM_to_ScantronAS(asapFilePath, sectionTable, merge = "TP",
-  alphaResponses = T, messageLevel = 0)
+  alphaResponses = T, additionalExams = NULL, messageLevel = 0)
 }
 \arguments{
 \item{asapFilePath}{Character of length 1 containing the filepath of an
